@@ -208,6 +208,13 @@ b{
 	width: 416px;
 	margin-top: 20px;
 }
+.top3:first-letter{
+	font-size: 70px;
+    line-height: 70px;
+  	padding-right: 8px;
+  	float: left;
+  	color: #f5e327;
+}
 .top3 img{
 	float: right;
 	padding: 10px 0px 10px 10px;
@@ -329,6 +336,7 @@ footer{
 	margin:0 auto;
 	font-size: 14px;
 }
+
 
 
 
