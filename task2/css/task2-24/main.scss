@@ -1,0 +1,45 @@
+$hVal:150px; //最外层box高度
+$hSub:30px; //每缩小一层box缩小的高度
+$bdColor: #593c7f;
+$font:'arial';
+%boxBorder {
+    border: 1px solid $bdColor;
+}
+
+%boxDisplay {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+body{
+    font-family: $font;
+}
+[class*='level-'] {
+    @extend %boxBorder;
+    background: #fff;
+    @extend %boxDisplay;
+    padding: 0 5px;
+    margin: 0 5px;
+}
+
+//设置每个box的宽度和高度
+@mixin box-hw {
+    @for $i from 1 through 5 {
+        .level-#{$i} {
+            height: ($hVal - $hSub*($i - 1));
+        }
+    }
+}
+@include box-hw;
+
+#box-container,
+#traverse-container,
+#search-container,
+#insert-delete {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+}
+input{
+	margin:0 5px;
+}
